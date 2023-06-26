@@ -150,7 +150,7 @@ def parseObjectNotification(dictObject, service=None, shortMessage=False):
 """
 
 
-def handler(event, context):
+def lambda_handler(event, context):
 
     webhookUrl = os.getenv("WEBHOOK_URL")
     shortMessage = os.getenv("SHORT_MSG", False)
