@@ -1,6 +1,6 @@
 Essa implementação foi uma melhoria da Lambda disponibilizada no Artigo do Daniel da Costa em 2020 para atender minha necessidade.
+https://towardsdatascience.com/discord-notification-using-cloudwatch-alarms-sns-and-aws-lambda-71393861699f
 
-Discord notification using CloudWatch Alarms, SNS and AWS Lambda
 Podemos no SNS, apontar criar uma nova subscription HTTPS e apontar o URL do Webhook para Envio de notificações.
 
 A Proposta para a Lambda é poder customizar e encaminhar isso para o Webhook do Discord, podendo tratar as notificações previamente, criar um template de notificação customizado caso não deseje enviar um JSON limpo, enfim, existem infinitas possibilidades.
@@ -51,11 +51,3 @@ fields @timestamp, @message
 | filter @message not like "START RequestId" and @message not like 'END RequestId' and @message not like 'REPORT RequestId'
 | sort @timestamp asc
 | limit 2000
- 
-
-Screenshots
-Screenshot
-
-Screenshot
-
-Screenshot
